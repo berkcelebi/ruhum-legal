@@ -29,7 +29,7 @@
     <p class="tagline">Feel &middot; Understand &middot; Act</p>
 
     <div class="highlight">
-      <p><strong>The short version:</strong> Your journal entries and personal notes never leave your device. Ruhum is designed with privacy at its core — we cannot read your data because we never have it.</p>
+      <p><strong>The short version:</strong> Everything you write is stored on your device and never on our servers — we have no servers. To generate your AI coaching and weekly report, Ruhum sends your check-in data directly to Anthropic's Claude API. By default that includes the notes you write. You can turn note sharing off at any time in <em>Settings &rarr; Privacy</em>, and only mood, energy and activity data will be sent.</p>
     </div>
 
     <h2>1. Data That Stays on Your Device</h2>
@@ -41,30 +41,40 @@
       <li>Chat conversation history</li>
       <li>App preferences and settings</li>
     </ul>
-    <p>This data is stored using on-device storage and is <strong>never uploaded to any server</strong>. If you delete the app, this data is permanently removed.</p>
+    <p>This data is stored using on-device storage. Ruhum operates <strong>no servers of its own</strong>, so none of it is uploaded to us or backed up by us. Deleting the app, or using <em>Delete Account</em> / <em>Delete All My Data</em> in Settings, removes it permanently. Some of this data is sent to Anthropic to generate AI responses — see section 2.</p>
 
     <h2>2. What We Send to AI Services</h2>
-    <p>When you use AI features (Action Coach, AI Chat, Weekly Report), Ruhum sends <strong>anonymous, structured summaries</strong> to the Anthropic Claude API. For example:</p>
+    <p>AI features (Action Coach, AI Chat, Weekly Report, AI Memory) work by sending data from your device <strong>directly to Anthropic's Claude API</strong>. The request does not pass through any Ruhum server, and it carries no account ID or device identifier.</p>
+
+    <p><strong>Always sent when you use an AI feature:</strong></p>
     <ul>
-      <li>Mood score: 4 out of 5</li>
-      <li>Energy level: 3 out of 5</li>
-      <li>Selected activity tags (e.g., "work", "exercise")</li>
-      <li>Chat messages you type to the AI assistant</li>
+      <li>Mood score (e.g. 4 out of 5) and energy level</li>
+      <li>Selected activity tags (e.g. "work", "exercise")</li>
+      <li>Dates of the check-ins in the period being analysed</li>
+      <li>Your chosen profile mode (professional / parent / both)</li>
+      <li>Any message you type into the AI Chat</li>
     </ul>
-    <p><strong>Your raw journal text and personal notes are never sent to any external service.</strong> Only the structured data points and your direct chat messages are transmitted to generate AI responses.</p>
+
+    <p><strong>Sent by default, and you can turn it off:</strong></p>
+    <ul>
+      <li><strong>The notes you write in your check-ins.</strong> Your written notes are included in the prompt used to generate your weekly report and, for Premium users, your AI Memory profile. This is on by default.</li>
+    </ul>
+    <p>To stop it, turn off <em>Share notes with AI</em> in <em>Settings &rarr; Privacy</em> (available to all users, free and Premium). With it off, your notes never leave your device and the AI works from mood, energy and activity data alone.</p>
+
+    <p><strong>Sent for Premium users only:</strong></p>
+    <ul>
+      <li><strong>Your display name,</strong> if you have one saved, so the AI coach can address you personally. It is included in the AI Memory context sent with coaching and report requests.</li>
+    </ul>
+
+    <p>Anthropic processes these requests to generate a response. Ruhum does not receive, store, or have any access to a copy. See <a href="https://www.anthropic.com/privacy">Anthropic's Privacy Policy</a> for how they handle API data.</p>
 
     <h2>3. Subscription and Payment Data</h2>
     <p>Ruhum uses <strong>RevenueCat</strong> to manage subscriptions, which connects to Apple App Store and Google Play billing. We never see, store, or process your credit card or payment details. All payment processing is handled entirely by Apple or Google.</p>
     <p>RevenueCat receives an anonymous app user ID to manage your subscription status. No personal information is shared with RevenueCat.</p>
 
     <h2>4. Analytics</h2>
-    <p>We may collect anonymous, aggregated usage analytics to improve the app experience. This includes:</p>
-    <ul>
-      <li>App opens and screen views (no personal content)</li>
-      <li>Feature usage frequency</li>
-      <li>Crash reports and performance metrics</li>
-    </ul>
-    <p>These analytics <strong>cannot be linked to your identity</strong> and contain no personal health data.</p>
+    <p>Ruhum currently collects <strong>no usage analytics and no crash reports</strong>. No analytics SDK is included in the app.</p>
+    <p>If this changes in a future version, this policy will be updated before that version ships, and any such data will be anonymous, unlinkable to your identity, and free of personal health content.</p>
 
     <h2>5. Data Security</h2>
     <ul>
@@ -76,21 +86,23 @@
     <h2>6. Your Rights</h2>
     <p>Since your data lives on your device, you have full control:</p>
     <ul>
-      <li><strong>Access:</strong> All your data is visible in the app at any times.</li>
-      <li><strong>Delete:</strong> Delete the app to remove all data permanently.</li>
-      <li><strong>Export:</strong> Premium users can export their data as CSV or PDF.</li>
-      <li><strong>Portability:</strong> Your data is yours — we never have a copy.</li>
+      <li><strong>Access:</strong> All your data is visible in the app at any time. Premium users can additionally review exactly what the AI has stored about them under <em>Settings &rarr; AI Memory</em>.</li>
+      <li><strong>Delete your account:</strong> <em>Settings &rarr; Account &rarr; Delete Account</em> permanently removes your account and all data associated with it, from within the app. No request to us is needed.</li>
+      <li><strong>Delete your data:</strong> <em>Settings &rarr; Delete All My Data</em> wipes everything and returns you to first-time setup. Deleting the app does the same.</li>
+      <li><strong>Withdraw consent:</strong> Turn off <em>Share notes with AI</em> in <em>Settings &rarr; Privacy</em> to stop sending your written notes. Premium users can also erase the AI's stored profile with <em>Forget me</em> under AI Memory.</li>
+      <li><strong>Export:</strong> Export your check-ins as CSV or PDF (Premium), or take a full JSON backup from <em>Settings &rarr; Backup</em>.</li>
+      <li><strong>Portability:</strong> Your data is yours — we never hold a copy.</li>
     </ul>
 
     <h2>7. KVKK Compliance (Turkey)</h2>
-    <p>For users in Turkey: Ruhum complies with the Turkish Personal Data Protection Law (KVKK, Law No. 6698). Since personal data is stored only on your device and never transferred to our servers, no cross-border data transfer of personal information occurs. Anonymous AI interaction data is processed based on your explicit consent when you use AI features.</p>
+    <p>For users in Turkey: Ruhum complies with the Turkish Personal Data Protection Law (KVKK, Law No. 6698). Personal data is stored only on your device and is never transferred to a Ruhum server — we operate none. When you use an AI feature, the data described in section 2 is transferred to Anthropic (United States) to generate your response; this processing is based on your explicit consent, given by using the feature, and note sharing can be withdrawn at any time in <em>Settings &rarr; Privacy</em> without affecting the rest of the app. You may exercise your KVKK rights, including erasure, directly in the app via <em>Delete Account</em>, or by contacting us at the address in section 12.</p>
 
     <h2>8. Children's Privacy</h2>
     <p>Ruhum is not intended for children under 13. We do not knowingly collect any data from children under 13 years of age.</p>
 
     <h2>9. Third-Party Services</h2>
     <ul>
-      <li><strong>Anthropic (Claude API):</strong> Processes anonymous mood summaries and chat messages to generate AI responses. <a href="https://www.anthropic.com/privacy">Anthropic Privacy Policy</a></li>
+      <li><strong>Anthropic (Claude API):</strong> Receives the check-in data described in section 2 — mood, energy, activities, your chat messages, and, unless you turn it off, your written notes — to generate AI responses. Requests carry no account or device identifier. <a href="https://www.anthropic.com/privacy">Anthropic Privacy Policy</a></li>
       <li><strong>RevenueCat:</strong> Manages subscription status with anonymous user IDs. <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a></li>
       <li><strong>Apple / Google:</strong> Handles all payment processing through their respective app stores.</li>
     </ul>
@@ -109,7 +121,7 @@
     Washington State, USA<br />
     Email: <a href="mailto:berkcelebi@gmail.com">berkcelebi@gmail.com</a></p>
 
-    <p class="updated">Effective Date: March 31, 2026 &middot; Last Updated: March 31, 2026</p>
+    <p class="updated">Effective Date: March 31, 2026 &middot; Last Updated: August 4, 2026</p>
   </div>
 </body>
 </html>
