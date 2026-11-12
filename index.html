@@ -3,125 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruhum — Privacy Policy</title>
+  <title>Ruhum Privacy Policy</title>
+  <meta name="description" content="How Ruhum handles your data: what stays on your phone, what is sent to the AI provider and only with your consent, and your rights under KVKK and US state law." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root { --bg: #0F172A; --card: #1E293B; --text: #F8FAFC; --muted: #94A3B8; --accent: #10B981; }
+    :root { --bg: #0E1424; --card: #161E33; --line: #26314D; --text: #F2F5F9; --muted: #B3BDCE; --faint: #8B97AD; --accent: #4CC98A; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 2rem 1rem; }
-    .container { max-width: 720px; margin: 0 auto; }
-    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
-    .tagline { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
-    h2 { font-size: 1.25rem; color: var(--accent); margin-top: 2rem; margin-bottom: 0.75rem; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 2.5rem 1rem 4rem; }
+    .container { max-width: 760px; margin: 0 auto; }
+    h1 { font-family: 'Lora', Georgia, serif; font-size: 2.1rem; line-height: 1.2; margin-bottom: 0.4rem; }
+    .tagline { color: var(--faint); margin-bottom: 2rem; font-size: 0.95rem; }
+    h2 { font-size: 1.2rem; color: var(--accent); margin-top: 2.25rem; margin-bottom: 0.75rem; scroll-margin-top: 1rem; }
+    h3 { font-size: 1rem; margin: 1.25rem 0 0.5rem; }
     p, li { color: var(--muted); margin-bottom: 0.75rem; }
     ul { padding-left: 1.25rem; }
-    li { margin-bottom: 0.5rem; }
+    li { margin-bottom: 0.45rem; }
     strong { color: var(--text); }
-    .highlight { background: var(--card); border-left: 3px solid var(--accent); padding: 1rem 1.25rem; border-radius: 8px; margin: 1.25rem 0; }
-    .highlight p { margin-bottom: 0; }
-    .updated { color: var(--muted); font-size: 0.85rem; margin-top: 3rem; border-top: 1px solid var(--card); padding-top: 1rem; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    .highlight { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 1rem 1.25rem; border-radius: 10px; margin: 1.25rem 0; }
+    .highlight p:last-child { margin-bottom: 0; }
+    .toc { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .toc ol { padding-left: 1.25rem; }
+    .toc li { margin-bottom: 0.2rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--line); color: var(--muted); }
+    th { color: var(--text); font-weight: 600; }
+    .tr { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 0.5rem; }
+    .updated { color: var(--faint); font-size: 0.85rem; margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+    a { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Ruhum Privacy Policy</h1>
-    <p class="tagline">Feel &middot; Understand &middot; Act</p>
+    <p class="tagline">AI mood journal and action coach. Last updated November 12, 2026.</p>
 
     <div class="highlight">
-      <p><strong>The short version:</strong> Everything you write is stored on your device and never on our servers — we have no servers. To generate your AI coaching and weekly report, Ruhum sends your check-in data directly to Anthropic's Claude API. By default that includes the notes you write. You can turn note sharing off at any time in <em>Settings &rarr; Privacy</em>, and only mood, energy and activity data will be sent.</p>
+      <p><strong>The short version.</strong> Your journal lives on your phone; Ruhum has no servers and no accounts of its own. The AI features are <strong>off until you give explicit, opt-in consent</strong> and confirm you are 18 or older. With consent, your chat messages and summaries of your mood, energy and activities are sent directly to our AI provider, <strong>Anthropic, in the United States</strong>, to write replies and reports. The text of your notes is sent only if you separately allow it. You can withdraw either choice at any time in <strong>Settings → Privacy</strong>, and delete everything from the app.</p>
     </div>
 
-    <h2>1. Data That Stays on Your Device</h2>
-    <p>Ruhum stores all personal data locally on your device. This includes:</p>
+    <nav class="toc" aria-label="Contents">
+      <ol>
+        <li><a href="#1">Who is responsible</a></li>
+        <li><a href="#2">Data that stays on your device</a></li>
+        <li><a href="#3">AI features and what is sent</a></li>
+        <li><a href="#4">Subscriptions, sign-in and payments</a></li>
+        <li><a href="#5">No analytics, ads or tracking</a></li>
+        <li><a href="#6">Your rights and choices</a></li>
+        <li><a href="#7">KVKK aydınlatma metni (Türkiye)</a></li>
+        <li><a href="#8">US state privacy laws</a></li>
+        <li><a href="#9">Age requirement</a></li>
+        <li><a href="#10">Security and breach notification</a></li>
+        <li><a href="#11">Safety and crisis support</a></li>
+        <li><a href="#12">Changes and contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="1">1. Who is responsible</h2>
+    <p>Ruhum is developed and published by <strong>Berk Çelebi</strong>, an individual developer based in Washington State, USA, who decides how the app handles personal data (the "data controller"). Contact: <a href="mailto:info@ruhum.app">info@ruhum.app</a>. App support: <a href="mailto:support@ruhum.app">support@ruhum.app</a>.</p>
+
+    <h2 id="2">2. Data that stays on your device</h2>
+    <p>Ruhum stores the following only in the app's storage on your device:</p>
     <ul>
-      <li>Mood and energy check-ins</li>
-      <li>Journal notes and personal reflections</li>
-      <li>Activity tags and daily patterns</li>
-      <li>Chat conversation history</li>
-      <li>App preferences and settings</li>
+      <li>Check-ins: mood, energy, activity tags, notes, profile mode (professional, parent or both)</li>
+      <li>Chat history, AI memory (Premium), weekly reports</li>
+      <li>Your display name, app settings and your privacy choices (including the date you gave or withdrew consent)</li>
+      <li>If you sign in with Apple: the identifier, name and email Apple provides, stored on the device only</li>
     </ul>
-    <p>This data is stored using on-device storage. Ruhum operates <strong>no servers of its own</strong>, so none of it is uploaded to us or backed up by us. Deleting the app, or using <em>Delete Account</em> / <em>Delete All My Data</em> in Settings, removes it permanently. Some of this data is sent to Anthropic to generate AI responses — see section 2.</p>
+    <p>None of this is uploaded to us; we operate no servers. It may be included in your own iCloud device backup under your Apple settings. Deleting the app, or using <strong>Delete All My Data</strong> or <strong>Delete Account</strong> in Settings, removes it.</p>
 
-    <h2>2. What We Send to AI Services</h2>
-    <p>AI features (Action Coach, AI Chat, Weekly Report, AI Memory) work by sending data from your device <strong>directly to Anthropic's Claude API</strong>. The request does not pass through any Ruhum server, and it carries no account ID or device identifier.</p>
+    <h2 id="3">3. AI features and what is sent</h2>
+    <p>The AI features are the <strong>AI chat</strong>, the <strong>weekly AI report</strong> (Premium) and <strong>AI memory</strong> (Premium). They only work after you tick the consent boxes on the "Your data, your choice" screen. The short tip shown after each check-in is written on your device and sends nothing.</p>
+    <p>With your consent, the app sends data <strong>directly from your device to Anthropic, PBC (United States)</strong>, which acts as our AI service provider. Requests do not pass through any Ruhum server and carry no account or device identifier.</p>
+    <table>
+      <tr><th>Data</th><th>When it is sent</th></tr>
+      <tr><td>Messages you type in the AI chat (recent conversation for context)</td><td>Each time you send a chat message</td></tr>
+      <tr><td>Mood and energy scores, activity tags, check-in dates, profile mode</td><td>Weekly AI report and AI memory refresh</td></tr>
+      <tr><td>The text of your check-in notes</td><td>Only if you also ticked "include my notes"</td></tr>
+      <tr><td>Your display name</td><td>Premium AI memory only, so the coach can address you</td></tr>
+    </table>
+    <p>These are <strong>health-related data</strong>. Anthropic processes them to generate a response and handles API data under its own terms and <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>; Ruhum receives no copy. We do not sell your data or share it for advertising.</p>
+    <p><strong>Never sent:</strong> chat messages and check-in notes that read like thoughts of suicide or self-harm. They are recognised on your device and answered with crisis lines instead (see section 11).</p>
 
-    <p><strong>Always sent when you use an AI feature:</strong></p>
+    <h2 id="4">4. Subscriptions, sign-in and payments</h2>
     <ul>
-      <li>Mood score (e.g. 4 out of 5) and energy level</li>
-      <li>Selected activity tags (e.g. "work", "exercise")</li>
-      <li>Dates of the check-ins in the period being analysed</li>
-      <li>Your chosen profile mode (professional / parent / both)</li>
-      <li>Any message you type into the AI Chat</li>
-    </ul>
-
-    <p><strong>Sent by default, and you can turn it off:</strong></p>
-    <ul>
-      <li><strong>The notes you write in your check-ins.</strong> Your written notes are included in the prompt used to generate your weekly report and, for Premium users, your AI Memory profile. This is on by default.</li>
-    </ul>
-    <p>To stop it, turn off <em>Share notes with AI</em> in <em>Settings &rarr; Privacy</em> (available to all users, free and Premium). With it off, your notes never leave your device and the AI works from mood, energy and activity data alone.</p>
-
-    <p><strong>Sent for Premium users only:</strong></p>
-    <ul>
-      <li><strong>Your display name,</strong> if you have one saved, so the AI coach can address you personally. It is included in the AI Memory context sent with coaching and report requests.</li>
-    </ul>
-
-    <p>Anthropic processes these requests to generate a response. Ruhum does not receive, store, or have any access to a copy. See <a href="https://www.anthropic.com/privacy">Anthropic's Privacy Policy</a> for how they handle API data.</p>
-
-    <h2>3. Subscription and Payment Data</h2>
-    <p>Ruhum uses <strong>RevenueCat</strong> to manage subscriptions, which connects to Apple App Store and Google Play billing. We never see, store, or process your credit card or payment details. All payment processing is handled entirely by Apple or Google.</p>
-    <p>RevenueCat receives an anonymous app user ID to manage your subscription status. No personal information is shared with RevenueCat.</p>
-
-    <h2>4. Analytics</h2>
-    <p>Ruhum currently collects <strong>no usage analytics and no crash reports</strong>. No analytics SDK is included in the app.</p>
-    <p>If this changes in a future version, this policy will be updated before that version ships, and any such data will be anonymous, unlinkable to your identity, and free of personal health content.</p>
-
-    <h2>5. Data Security</h2>
-    <ul>
-      <li><strong>Biometric Lock:</strong> Ruhum supports Face ID and Touch ID to prevent unauthorized access to your data.</li>
-      <li><strong>On-Device Storage:</strong> All sensitive data remains on your device, protected by your device's built-in encryption.</li>
-      <li><strong>Secure API Communication:</strong> All communication with AI services uses HTTPS/TLS encryption.</li>
-    </ul>
-
-    <h2>6. Your Rights</h2>
-    <p>Since your data lives on your device, you have full control:</p>
-    <ul>
-      <li><strong>Access:</strong> All your data is visible in the app at any time. Premium users can additionally review exactly what the AI has stored about them under <em>Settings &rarr; AI Memory</em>.</li>
-      <li><strong>Delete your account:</strong> <em>Settings &rarr; Account &rarr; Delete Account</em> permanently removes your account and all data associated with it, from within the app. No request to us is needed.</li>
-      <li><strong>Delete your data:</strong> <em>Settings &rarr; Delete All My Data</em> wipes everything and returns you to first-time setup. Deleting the app does the same.</li>
-      <li><strong>Withdraw consent:</strong> Turn off <em>Share notes with AI</em> in <em>Settings &rarr; Privacy</em> to stop sending your written notes. Premium users can also erase the AI's stored profile with <em>Forget me</em> under AI Memory.</li>
-      <li><strong>Export:</strong> Export your check-ins as CSV or PDF (Premium), or take a full JSON backup from <em>Settings &rarr; Backup</em>.</li>
-      <li><strong>Portability:</strong> Your data is yours — we never hold a copy.</li>
+      <li><strong>Apple</strong> processes all payments. We never see your card details.</li>
+      <li><strong>RevenueCat</strong> manages subscription status using an anonymous app user ID. No health data is shared with RevenueCat. <a href="https://www.revenuecat.com/privacy">RevenueCat privacy policy</a></li>
+      <li><strong>Sign in with Apple</strong> is optional. Ruhum works without an account.</li>
     </ul>
 
-    <h2>7. KVKK Compliance (Turkey)</h2>
-    <p>For users in Turkey: Ruhum complies with the Turkish Personal Data Protection Law (KVKK, Law No. 6698). Personal data is stored only on your device and is never transferred to a Ruhum server — we operate none. When you use an AI feature, the data described in section 2 is transferred to Anthropic (United States) to generate your response; this processing is based on your explicit consent, given by using the feature, and note sharing can be withdrawn at any time in <em>Settings &rarr; Privacy</em> without affecting the rest of the app. You may exercise your KVKK rights, including erasure, directly in the app via <em>Delete Account</em>, or by contacting us at the address in section 12.</p>
+    <h2 id="5">5. No analytics, ads or tracking</h2>
+    <p>Ruhum contains no analytics or crash-reporting SDK, shows no ads and does not track you across apps or websites. Because we do not track, browser "Do Not Track" signals require no different handling. If this ever changes, this policy will be updated before that version is released.</p>
 
-    <h2>8. Children's Privacy</h2>
-    <p>Ruhum is not intended for children under 13. We do not knowingly collect any data from children under 13 years of age.</p>
-
-    <h2>9. Third-Party Services</h2>
+    <h2 id="6">6. Your rights and choices</h2>
     <ul>
-      <li><strong>Anthropic (Claude API):</strong> Receives the check-in data described in section 2 — mood, energy, activities, your chat messages, and, unless you turn it off, your written notes — to generate AI responses. Requests carry no account or device identifier. <a href="https://www.anthropic.com/privacy">Anthropic Privacy Policy</a></li>
-      <li><strong>RevenueCat:</strong> Manages subscription status with anonymous user IDs. <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a></li>
-      <li><strong>Apple / Google:</strong> Handles all payment processing through their respective app stores.</li>
+      <li><strong>Withdraw consent:</strong> Settings → Privacy → turn off <em>AI features</em> (stops all AI sending) or <em>Share notes with AI</em>. Withdrawing is as easy as giving consent and does not affect the rest of the app.</li>
+      <li><strong>Access and portability:</strong> everything is visible in the app; Settings → Backup exports a full JSON copy; Premium can also export CSV/PDF.</li>
+      <li><strong>Deletion:</strong> Settings → Delete All My Data, or Delete Account if you signed in. Premium users can wipe the AI memory with <em>Forget me</em>.</li>
+      <li><strong>Questions or requests:</strong> email <a href="mailto:info@ruhum.app">info@ruhum.app</a>. Because we hold no copy of your data, most requests are answered by explaining the in-app controls; we respond within the time the applicable law requires (at the latest 30 days under KVKK and 45 days under Washington law).</li>
     </ul>
 
-    <h2>10. Mental Health Disclaimer</h2>
-    <div class="highlight">
-      <p>Ruhum is not a medical device, therapy tool, or substitute for professional mental health care. If you are experiencing a mental health crisis, please contact a qualified healthcare professional or your local emergency services.</p>
-    </div>
+    <section class="tr" lang="tr">
+    <h2 id="7">7. KVKK Aydınlatma Metni (Türkiye)</h2>
+    <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("KVKK") 10. maddesi uyarınca, Ruhum uygulamasını Türkiye'den kullananları bilgilendirmek amacıyla hazırlanmıştır. Açık rızan bu metinden ayrı olarak, uygulamadaki "Verilerin, senin kararın" ekranında alınır.</p>
+    <h3>Veri sorumlusu</h3>
+    <p>Berk Çelebi (bireysel geliştirici), Washington, Amerika Birleşik Devletleri. İletişim: <a href="mailto:info@ruhum.app">info@ruhum.app</a>.</p>
+    <h3>İşlenen kişisel veriler ve amaçlar</h3>
+    <ul>
+      <li><strong>Cihazında kalan veriler</strong> (check-in'ler, notlar, sohbet geçmişi, tercihler): günlük tutma, grafik ve öneri özelliklerini sunmak için. Bu veriler bize iletilmez.</li>
+      <li><strong>Sağlıkla ilgili özel nitelikli veriler</strong> (ruh hali, enerji, aktiviteler, sohbet mesajları; ayrıca izin verirsen not metinleri; Premium'da görünen adın): yalnızca yapay zekâ sohbeti, haftalık AI raporu ve AI hafızası özelliklerini sunmak amacıyla.</li>
+      <li><strong>Abonelik bilgisi</strong> (anonim kullanıcı kimliği, abonelik durumu): Premium aboneliğin yönetilmesi için.</li>
+    </ul>
+    <h3>Hukuki sebep ve toplama yöntemi</h3>
+    <p>Veriler, uygulamaya senin girmenle elektronik ortamda toplanır. Sağlıkla ilgili verilerin yapay zekâ sağlayıcısına gönderilmesi KVKK m.6 uyarınca <strong>açık rızana</strong> dayanır; bu rıza uygulamada ayrı ve önceden işaretlenmemiş kutucuklarla alınır, 18 yaşından büyük olduğunu teyit etmeni gerektirir ve istediğin zaman Ayarlar → Gizlilik bölümünden geri alınabilir. Abonelik bilgileri, abonelik sözleşmesinin kurulması ve ifası (KVKK m.5/2-c) sebebiyle işlenir.</p>
+    <h3>Aktarım</h3>
+    <p>Açık rıza vermen hâlinde yukarıdaki sağlıkla ilgili veriler, yapay zekâ cevabının üretilmesi amacıyla doğrudan cihazından <strong>Anthropic, PBC'ye (Amerika Birleşik Devletleri)</strong> aktarılır; bu, yurt dışına aktarımdır. Abonelik durumu RevenueCat, Inc. (ABD) ve Apple aracılığıyla işlenir. Verilerin satılmaz ve reklam amacıyla paylaşılmaz. İntihar veya kendine zarar verme düşüncesini akla getiren mesaj ve notlar hiçbir yere gönderilmez.</p>
+    <h3>Saklama</h3>
+    <p>Veriler, sen silene kadar yalnızca cihazında saklanır. Anthropic'e iletilen veriler, Anthropic'in kendi koşullarındaki süreler boyunca orada tutulabilir.</p>
+    <h3>KVKK m.11 kapsamındaki hakların</h3>
+    <p>Kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini, KVKK m.7 çerçevesinde silinmesini veya yok edilmesini ve bu işlemlerin aktarılan üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz edilmesi nedeniyle aleyhine bir sonuç çıkmasına itiraz etme ve kanuna aykırı işleme sebebiyle zarara uğraman hâlinde zararın giderilmesini talep etme haklarına sahipsin.</p>
+    <p>Başvurularını <a href="mailto:info@ruhum.app">info@ruhum.app</a> adresine iletebilirsin; talebin en geç otuz gün içinde ücretsiz olarak sonuçlandırılır. Rızanı geri alma ve verilerini silme işlemlerini başvuru yapmadan doğrudan uygulamadan da yapabilirsin.</p>
+    </section>
 
-    <h2>11. Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated effective date. Continued use of Ruhum after changes constitutes acceptance of the revised policy.</p>
+    <h2 id="8">8. US state privacy laws</h2>
+    <p>Washington residents, and anyone whose consumer health data is covered by Washington's My Health My Data Act or similar laws (such as Nevada's), should read our separate <a href="consumer-health-data.html"><strong>Consumer Health Data Privacy Policy</strong></a>. It describes the health data involved, the opt-in consents, the processors we use and how to exercise and appeal your rights. California residents: we do not sell or share personal information, and the rights above are available to you.</p>
 
-    <h2>12. Contact</h2>
-    <p>If you have any questions about this privacy policy or your data, please contact us:</p>
-    <p><strong>BERKCELEBI LLC</strong><br />
-    Washington State, USA<br />
-    Email: <a href="mailto:berkcelebi@gmail.com">berkcelebi@gmail.com</a></p>
+    <h2 id="9">9. Age requirement</h2>
+    <p>The AI features are for adults: you must confirm you are 18 or older before giving consent. Ruhum is not directed to children, and we do not knowingly collect data from anyone under 13.</p>
 
-    <p class="updated">Effective Date: March 31, 2026 &middot; Last Updated: August 4, 2026</p>
+    <h2 id="10">10. Security and breach notification</h2>
+    <p>Data is kept in on-device storage protected by your device's own encryption and passcode. Communication with the AI provider uses HTTPS/TLS. Because there is no Ruhum server, there is no central database to breach. If we learn of a breach affecting your health data, for example at a service provider, we will notify affected users and regulators as required by law, including the US Federal Trade Commission's Health Breach Notification Rule and, for users in Turkey, the KVKK Board.</p>
+
+    <h2 id="11">11. Safety and crisis support</h2>
+    <p>Ruhum is a self-help wellness tool. It is <strong>not a medical device, not therapy and not a substitute for professional care</strong>, and the coach is an AI, not a person. If you are thinking about ending your life or hurting yourself, contact emergency services or a crisis line now (Türkiye 112, US and Canada 988, UK and Ireland 116 123, other countries: <a href="https://findahelpline.com">findahelpline.com</a>). Our crisis protocol is published at <a href="https://ruhum.app/#safety-protocol">ruhum.app</a>.</p>
+
+    <h2 id="12">12. Changes and contact</h2>
+    <p>We will update this page, and its date, before any change takes effect. If a change affects what is sent to the AI provider, the app will ask for your consent again. Questions: <a href="mailto:info@ruhum.app">info@ruhum.app</a>.</p>
+
+    <p class="updated">Last updated: November 12, 2026</p>
   </div>
 </body>
 </html>
